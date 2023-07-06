@@ -49,7 +49,7 @@ sudo usermod -aG disk $USER
 
 
 # Steam Install
-
+sudo apt install -y ./steam_latest.deb
 sudo dpkg --add-architecture i386
 sudo apt-get update
 sudo apt install libgl1-mesa-dri:i386 libgl1:i386

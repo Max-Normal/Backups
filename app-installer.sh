@@ -65,12 +65,12 @@ sudo apt install -y lutris
 
 # ProtonUP-QT Flatpak Install
 
-sudo apt update && sudo flatpak install ./net.davidotek.pupgui2.flatpakref
+flatpak install ./net.davidotek.pupgui2.flatpakref
 
 
 # Bottles Flatpak Install
 
-sudo apt update && sudo flatpak install ./com.usebottles.bottles.flatpakref
+flatpak install ./com.usebottles.bottles.flatpakref
 
 
 # VS Code Install

@@ -8,8 +8,8 @@ bspc config merge_overlapping_monitors true
 workspaces() {
 	name=1
 	for monitor in `bspc query -M`; do
-		#bspc monitor ${monitor} -n "$name" -d '1' '2' '3' '4' '5' '6' '7' '8' '9'
-		bspc monitor ${monitor} -n "$name" -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII' 'IX'
+		#bspc monitor ${monitor} -n "$name" -d '1' '2' '3' '4' '5' '6' '7' '8' '9' '0'
+		bspc monitor ${monitor} -n "$name" -d 'I' 'II' 'III' 'IV' 'V' 'VI' 'VII' 'VIII' 'IX' 'X'
 		let name++
 	done
 }
@@ -49,12 +49,12 @@ for i in ${office[@]}; do
    bspc rule -a $i desktop='^5' follow=on focus=on; done
 
 ## 6 > communication (always open communication apps on workspace-6)
-declare -a comm=(Thunderbird TelegramDesktop Hexchat)
+declare -a comm=(Thunderbird Mail thunderbird-default TelegramDesktop Hexchat)
 for i in ${comm[@]}; do
    bspc rule -a $i desktop='^6' follow=on focus=on; done
 
 ## 7 > media (always open media apps on workspace-7)
-declare -a media=(Audacity Music MPlayer Spotify Lxmusic Inkscape Gimp-2.10 )
+declare -a media=(Audacity Music MPlayer Lxmusic gl mpv Inkscape Gimp-2.10 )
 for i in ${media[@]}; do
    bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
@@ -66,6 +66,15 @@ System-config-printer.py Pavucontrol Exo-helper-1 \
 Xfce4-power-manager-settings)
 for i in ${settings[@]}; do
    bspc rule -a $i desktop='^8' state=floating follow=on focus=on; done
+   
+## 9 > gaming (always open gaming apps on workspace-9)
+declare -a gaming=(steamwebhelper steam lutris Lutris)
+for i in ${gaming[@]}; do
+   bspc rule -a $i desktop='^9' focus=on follow=on; done
+
+## 10 > spotify (always open spotify on workspace-10)
+bspc rule -a Spotify desktop='^10' focus=on follow=on
+
 
 bspc rule -a scpad sticky=on state=floating rectangle=800x400+250+250
 
@@ -79,10 +88,10 @@ bspc config focus_follows_pointer	true
 bspc config borderless_monocle		true
 bspc config gapless_monocle			true
 
-bspc config focused_border_color	"#BD93F9"
-bspc config normal_border_color		"#282A36"
-bspc config active_border_color		"#8BE9FD"
-bspc config presel_feedback_color	"#50FA7B"
+bspc config focused_border_color	"#ff79c6"
+bspc config normal_border_color		"#44475a"
+bspc config active_border_color		"#bd93f9"
+bspc config presel_feedback_color	"#6272a4"
 
 ## Autostart -------------------------------------------------#
 
@@ -94,6 +103,9 @@ bspc config presel_feedback_color	"#50FA7B"
 
 # Battery Notification
 ~/.local/bin/bat-notify.sh &
+
+# Polybar Startup
+#~/.config/polybar/launch.sh &
 
 dunst &
 feh --bg-fill --randomize ~/Pictures/Wallpapers/* &

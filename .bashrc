@@ -44,6 +44,7 @@ sudo() {
 
 # Add Color
 alias egrep='grep --color=auto' 
+export "MICRO_TRUECOLOR=1"
 
 export PATH="~/bin:$PATH"
 export PATH="~/.local/bin:$PATH"
@@ -53,3 +54,7 @@ export PATH="/usr/local/go/bin:$PATH"
 # PS1 Customization
 PS1="\[\e[32m\]\h\[\e[m\]\[\e[36m\]@\[\e[m\]\[\e[34m\]\u\[\e[m\] \W \$ " 
 neofetch
+. "$HOME/.cargo/env"
+eval "$(starship init bash)"
+
+export PATH=$PATH:/home/zachary/.spicetify

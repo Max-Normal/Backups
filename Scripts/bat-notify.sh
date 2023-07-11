@@ -12,9 +12,9 @@ BatteryStatus=`cat /sys/class/power_supply/BAT1/status`
 BatteryDischarging="Discharging"
 BatteryCharging="Charging"
 BatteryFull="Full"
-CriticalAlert=10
+CriticalAlert=15
 NormalAlert=20
-LowAlert=30
+LowAlert=25
 
 	if [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ $BatteryCapacity -le $CriticalAlert ]; then
 		  ((i=0))
@@ -22,7 +22,7 @@ LowAlert=30
 		  sleep 120
 	elif [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ $BatteryCapacity -le $NormalAlert ]; then
 		  ((i=0))
-		  nofify-send -u normal "Alert" "Battery getting low..."
+		  notify-send -u normal "Alert" "Battery getting low..."
 		  sleep 180
 	elif [[ "$BatteryStatus" == "$BatteryDischarging" ]] && [ $BatteryCapacity -le $LowAlert ]; then
 		  ((i=0))
@@ -33,7 +33,7 @@ LowAlert=30
 		  ((i++))
 	elif [[ "$BatteryStatus" == "$BatteryCharging" ]] && [ $BatteryCapacity -le 95 ]; then
 		  ((i=0))
-		  nofify-send -u normal "Alert" "Charger can be disconnected"
+		  notify-send -u normal "Alert" "Charger can be disconnected"
 		  sleep 600
 	elif [[ "$BatteryStatus" == "$BatteryCharging" ]] && [ $i = 0 ]; then
 		  sleep 2

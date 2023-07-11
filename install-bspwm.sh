@@ -87,7 +87,7 @@ sudo apt install -y mpv nala redshift timeshift brightnessctl libreoffice stacer
 xdg-user-dirs-update
 
 
-mkdir -p ~/.config/{bspwm,sxhkd,dunst,rofi,kitty,picom}
+mkdir -p ~/.config/{bspwm,sxhkd,dunst,rofi,kitty,picom,polybar}
 mkdir -p ~/.local/bin
 
 install -Dm755 /usr/share/doc/bspwm/examples/bspwmrc ~/.config/bspwm/bspwmrc
@@ -110,6 +110,7 @@ cp ~/backups/Sxhkd/sxhkdrc ~/.config/sxhkd/
 cp ~/backups/Dunst/dunstrc ~/.config/dunst/
 cp ~/backups/Kitty/kitty.conf ~/.config/kitty/
 cp ~/backups/Picom/picom.conf ~/.config/picom/
+cp ~/backups/Polybar/* ~/.config/polybar/
 cp -r ~/backups/Rofi/* ~/.config/rofi/
 cp ~/backups/Scripts/* ~/.local/bin/
 cp ~/backups/.bashrc ~/

@@ -54,7 +54,7 @@ for i in ${comm[@]}; do
    bspc rule -a $i desktop='^6' follow=on focus=on; done
 
 ## 7 > media (always open media apps on workspace-7)
-declare -a media=(Audacity Music MPlayer Lxmusic gl mpv Inkscape Gimp-2.10 )
+declare -a media=(Audacity Music MPlayer Lxmusic gl mpv Inkscape Gimp gimp)
 for i in ${media[@]}; do
    bspc rule -a $i desktop='^7' state=floating follow=on focus=on; done
 
@@ -74,6 +74,7 @@ for i in ${gaming[@]}; do
 
 ## 10 > spotify (always open spotify on workspace-10)
 bspc rule -a Spotify desktop='^10' focus=on follow=on
+
 
 
 bspc rule -a scpad sticky=on state=floating rectangle=800x400+250+250
@@ -102,10 +103,11 @@ bspc config presel_feedback_color	"#6272a4"
 ~/.xinputrc &
 
 # Battery Notification
-~/.local/bin/bat-notify.sh &
+~/.local/bin/batterynotify &
 
 # Polybar Startup
-#~/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh &
+
 
 dunst &
 feh --bg-fill --randomize ~/Pictures/Wallpapers/* &

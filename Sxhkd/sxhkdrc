@@ -13,13 +13,13 @@ super + shift + Return
 	
 # rofi network manager	
 super + n
-	bash ~/.local/bin/rofi-network-manager
+	bash ~/.local/bin/rofi-wifi-menu.sh
 	
 super + b
 	~/.local/bin/rofi-bluetooth
 	
 super + alt  + b
-	~/.local/bin/batt
+	~/.local/bin/chargingnotify 0
 	
 
 # logout, shutdown, reboot
@@ -48,7 +48,7 @@ super + d
 	discord
 
 super + v
-	~/.local/bin/HideMe.sh
+	virt-manager
 
 super + t
 	~/.local/bin/time_date

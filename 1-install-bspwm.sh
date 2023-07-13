@@ -33,7 +33,7 @@ sudo apt install -y thunar thunar-archive-plugin thunar-volman
 sudo apt install -y kitty
 
 # Sound packages
-sudo apt install -y pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber pavucontrol pamixer
+sudo apt install -y pipewire-audio pavucontrol pamixer
 
 # Neofetch
 sudo apt install -y neofetch htop

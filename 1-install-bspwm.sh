@@ -69,7 +69,7 @@ sudo apt install -y exa
 
 # Printing and bluetooth (if needed)
 sudo apt install -y cups system-config-printer simple-scan
-sudo apt install -y bluez blueman libspa-0.2-bluetooth qjackctl
+sudo apt install -y bluez blueman qjackctl
 
 sudo systemctl enable cups
 sudo systemctl enable bluetooth

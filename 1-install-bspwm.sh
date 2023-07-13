@@ -79,7 +79,7 @@ sudo systemctl enable bluetooth
 sudo apt install -y bspwm dmenu sxhkd numlockx rofi dunst polybar libnotify-bin unzip
 
 # my apps
-sudo apt install -y geany scrot evince gimp gnome-disk-utility gparted arandr ranger vlc thunderbird inkscape neovim
+sudo apt install -y geany scrot evince gimp gnome-disk-utility gparted arandr ranger vlc thunderbird inkscape neovim gsimplecal
 sudo apt install -y mpv nala redshift timeshift brightnessctl libreoffice stacer tlp tlp-rdw file-roller xdotool playerctl
 
 

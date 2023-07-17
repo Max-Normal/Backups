@@ -62,6 +62,9 @@ super + alt + w
 super + l
 	betterlockscreen -l
 
+# Hide/Unhide Window
+super + shift + h
+	~/.local/bin/winhide
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -82,8 +85,8 @@ super + i
 super + shift + i
     bspc node -R -90
 
-super + {shift + t,shift + f}
-	bspc node -t {tiled,fullscreen}
+super + {shift + t,shift + f,shift + y,shift + u}
+	bspc node -t {tiled,fullscreen,floating,pseudo_tiled}
 
 super + { Left, Down, Up, Right}
 	bspc node -f {west,south,north,east}

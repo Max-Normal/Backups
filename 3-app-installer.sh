@@ -49,28 +49,28 @@ sudo usermod -aG disk $USER
 
 
 # Steam Install
-sudo apt install -y ./steam_latest.deb
-sudo dpkg --add-architecture i386
-sudo apt-get update
-sudo apt install libgl1-mesa-dri:i386 libgl1:i386
-sudo apt-get upgrade steam -f
-sudo apt install nvidia-driver-libs:i386
+# sudo apt install -y ./steam_latest.deb
+# sudo dpkg --add-architecture i386
+# sudo apt-get update
+# sudo apt install libgl1-mesa-dri:i386 libgl1:i386
+# sudo apt-get upgrade steam -f
+# sudo apt install nvidia-driver-libs:i386
 
 # Lutris Install
 
-echo 'deb http://download.opensuse.org/repositories/home:/strycore/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:strycore.list
-curl -fsSL https://download.opensuse.org/repositories/home:strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_strycore.gpg > /dev/null
-sudo apt update
-sudo apt install -y lutris
+# echo 'deb http://download.opensuse.org/repositories/home:/strycore/Debian_12/ /' | sudo tee /etc/apt/sources.list.d/home:strycore.list
+# curl -fsSL https://download.opensuse.org/repositories/home:strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/home_strycore.gpg > /dev/null
+# sudo apt update
+# sudo apt install -y lutris
 
 # ProtonUP-QT Flatpak Install
 
-flatpak install ./net.davidotek.pupgui2.flatpakref
+# flatpak install ./net.davidotek.pupgui2.flatpakref
 
 
 # Bottles Flatpak Install
 
-flatpak install ./com.usebottles.bottles.flatpakref
+# flatpak install ./com.usebottles.bottles.flatpakref
 
 
 # VS Code Install

@@ -80,7 +80,7 @@ sudo apt install -y bspwm dmenu sxhkd numlockx rofi dunst polybar libnotify-bin 
 
 # my apps
 sudo apt install -y geany scrot evince gimp gnome-disk-utility gparted arandr ranger vlc thunderbird inkscape neovim
-sudo apt install -y mpv nala redshift timeshift brightnessctl libreoffice stacer tlp tlp-rdw file-roller xdotool
+sudo apt install -y mpv nala redshift timeshift brightnessctl libreoffice stacer tlp tlp-rdw file-roller xdotool playerctl
 
 
 # Create folders in user directory (eg. Documents,Downloads,etc.)
